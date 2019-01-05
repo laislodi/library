@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-light">
+<!-- Primeira container -->
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <a class="navbar-brand" href="/home.html">Home</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto" id="client-collapse-menu">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="client-dropdown-menu" role="button"
+                           data-toggle="dropdown">Cliente</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/client/new-client.html">Cadastro</a>
+                            <a class="dropdown-item" href="/client/search-client.html">Listagem</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="book-dropdown-menu" role="button"
+                           data-toggle="dropdown">Livro</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/book/new-book.html">Cadastro</a>
+                            <a class="dropdown-item" href="/book/search-book.html">Listagem</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row my-5">
+            <div class="col-9">
+                <h1 class="text-center">Listagem de Clientes</h1>
+            </div>
+        </div>
+        <hr/>
+        <form method="get" id="form-search-client">
+            <div class="row" id="radio-has-books">
+                <div class="col-lg-2 col-md-3 col-sm-3">
+                    <label for="radio-has-books">Possui Livros: </label>
+                </div>
+                <div class="radio col-lg-1 col-md-2 col-sm-3">
+                    <input type="radio" name="has-books" id="radio-has-books-no" checked>
+                    <label for="radio-has-books-no">Não</label>
+                </div>
+                <div class="radio col-lg-1 col-md-2 col-sm-3">
+                    <input type="radio" name="has-books" id="radio-has-books-yes">
+                    <label for="radio-has-books-yes">Sim</label>
+                </div>
+                <div class="radio col-lg-2 col-md-2 col-sm-3">
+                    <input type="radio" name="has-books" id="radio-has-books-both">
+                    <label for="radio-has-books-both">Ambos</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <label for="select-document">Buscar por:</label>
+                </div>
+                <div class="col-5">
+                    <label for="value-of">Valor:</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <select class="custom-select" id="select-document">
+                        <option selected value="document">CPF</option>
+                        <option value="name">Nome</option>
+                    </select>
+                </div>
+                <div class="col-5">
+                    <input type="text" id="value-of" class="form-control" required />
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary align-bottom" type="button" id="btn-search-client">Buscar</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="py-5">
+            <table class="table table-striped" id="client-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="py-4">
+            <p class="par align-self-center"></p>
+        </div>
+
+    </div><!-- Fim do container -->
+    <div class="text-center">
+        <button class="btn btn-primary">Voltar</button>
+        <button class="btn btn-primary">Novo</button>
+        <button class="btn btn-primary">Editar</button>
+        <button class="btn btn-primary" type="reset">Limpar</button>
+        <button class="btn btn-primary" type="button">Sair</button>
+    </div>
+
+    <footer>
+        <p>RODAPÉ SUPER BACANA</p>
+    </footer>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/client.js"></script>
+    <script src="/js/search-client.js"></script>
+</body>
+</html>

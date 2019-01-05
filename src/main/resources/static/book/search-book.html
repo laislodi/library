@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Library</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <a class="navbar-brand" href="/home.html">Home</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto" id="client-collapse-menu">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="client-dropdown-menu" role="button"
+                           data-toggle="dropdown">Cliente</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/client/new-client.html">Cadastro</a>
+                            <a class="dropdown-item" href="/client/search-client.html">Listagem</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="book-dropdown-menu" role="button"
+                           data-toggle="dropdown">Livro</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/book/new-book.html">Cadastro</a>
+                            <a class="dropdown-item" href="/book/search-book.html">Listagem</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row my-5">
+            <div class="col-9">
+                <h1 class="text-center">Listagem de Livros</h1>
+            </div>
+        </div>
+        <hr/>
+        <form method="get" id="form-search-book">
+            <div class="row form-row" id="radio-is-loaned">
+                <div class="col-lg-2 col-md-2 col-sm-3">
+                    <label for="radio-is-loaned">Emprestado: </label>
+                </div>
+                <div class="radio col-lg-1 col-md-2 col-sm-3">
+                    <input type="radio" name="is-loaned" id="radio-is-loaned-no" checked>
+                    <label for="radio-is-loaned-no">Não</label>
+                </div>
+                <div class="radio col-lg-1 col-md-2 col-sm-3">
+                    <input type="radio" name="is-loaned" id="radio-is-loaned-yes">
+                    <label for="radio-is-loaned-yes">Sim</label>
+                </div>
+                <div class="radio col-lg-2 col-md-2 col-sm-3">
+                    <input type="radio" name="is-loaned" id="radio-is-loaned-both">
+                    <label for="radio-is-loaned-both">Ambos</label>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <label for="loaned-before-date" class="label">Emprestado antes de:</label>
+                    <input class="form-control" type="date" id="loaned-before-date"/>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <label for="loned-after-date">E depois de:</label>
+                    <input class="form-control" type="date" id="loned-after-date"/>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg-9 col-md-12 col-sm-12">
+                    <label for="title-gender-resume">Título, Gênero ou Resumo</label>
+                    <input class="form-control" id="title-gender-resume" maxlength="150"/>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <label for="loaned-before-date" class="label">Publicado antes de:</label>
+                    <input class="form-control" type="date" id="published-before-date"/>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <label for="loned-after-date">E depois de:</label>
+                    <input class="form-control" type="date" id="published-after-date"/>
+                </div>
+            </div>
+            <div class="row float-right">
+                <div class="col-3">
+                    <button class="btn btn-primary align-bottom" type="button" id="btn-search-book">Buscar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
